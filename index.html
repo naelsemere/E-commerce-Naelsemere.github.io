@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo" class="logo">
+        </a>
+        <nav class="navigation">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="about.html" class="nav-item">About Us</a>
+            <a href="faq.html" class="nav-item">FAQs</a>
+             <a href="contact.html" class="nav-item">Contact Us</a>
+            <a href="cart.html" class="nav-item">Cart</a>
+        </nav>
+    </div>
+
+    <div class="hero">
+        <h1>ShopEasy E-Commerce</h1>
+        <p>Let’s make shopping simple and enjoyable.</p>
+        <video src="7287316-hd_1280_720_25fps.mp4" autoplay loop controls class="video"></video>
+    </div>
+    
+    <main>
+
+        <section class="catalog-section">
+            <h2 class="heading">Browse Our Catalog</h2>
+            <div class="catalog">
+                <div class="catalog-item">
+                    <img src="images/sumsang.jpeg" alt="SumSang Galaxy">
+                    <h3>SumSang Galaxy</h3>
+                    <p class="price">$ 500</p>
+                    <button onclick="addToCart('Samsung Galaxy', 500, 'images/sumsang.jpeg')">Buy Now</button>
+                    
+                </div>
+                <div class="catalog-item">
+                    <img src="images/xiomi.jpeg" alt="Xiaomi">
+                    <h3>Xiaomi</h3>
+                    <p class="price">$ 5100</p>
+                    <button onclick="addToCart('Xiaomi', 5100, 'images/xiomi.jpeg')">Buy Now</button>
+                    
+                </div>
+                <div class="catalog-item">
+                    <img src="images/iphone 11.jpeg" alt="Iphone 11">
+                    <h3>Iphone 11</h3>
+                    <p class="price">$ 500</p>
+                    <button onclick="addToCart('iPhone 11', 500, 'images/iphone 11.jpeg')">Buy Now</button>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <p>Copyright © 2025 ShopEasy Online Shopping - All Rights Reserved!</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

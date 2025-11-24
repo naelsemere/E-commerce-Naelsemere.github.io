@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Science</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+
+<body>
+    <!-- SECTION 1: Navigation BAR -->
+    <div class="header">
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo" class="logo">
+        </a>
+        <nav class="navigation">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="about.html" class="nav-item">About Us</a>
+            <a href="faq.html" class="nav-item">FAQs</a>
+            <a href="contact.html" class="nav-item">Contact Us</a>
+            <a href="cart.html" class="nav-item">Cart</a>
+        </nav>
+    </div>
+    <main>
+        <h1 class="heading">
+            CART
+        </h1>
+        
+        <div class="cart" id="cart-items"></div>
+
+<script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let container = document.getElementById("cart-items");
+
+    if (cart.length === 0) {
+        container.innerHTML = "Your cart is empty.";
+    } else {
+        container.innerHTML = cart.map(item => `
+            <div class="cart-item">
+                <img src="${item.image}" width="100">
+                <h3>${item.name}</h3>
+                <p>$${item.price}</p>
+            </div>
+            <hr>
+        `).join('');
+    }
+</script>
+        
+    </main>
+
+    <!-- SECTION 3: FOOTER -->
+    <footer class="footer">
+        <p>Copyright © 2025 ShopEasy Online Shopping - All Rights Reserved!</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
